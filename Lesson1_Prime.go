@@ -1,10 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
-
-func check(a int) bool {
+func checkPrime(a int) bool {
     if a < 2 {
         return false
     }
@@ -17,10 +13,3 @@ func check(a int) bool {
     return true
 }
 
-func printPrimes() {
-    for i := 1; i <= 100; i++ {
-        if check(i) {
-            fmt.Println(i)
-        }
-    }
-}

@@ -4,12 +4,10 @@ import (
 	"fmt"
 )
 
-func daonguochuoi(n string) string {
-    runes := []rune(n)
-    
-    return string(runes)
-}
-
 func main() {
-    fmt.Println(daonguochuoi("hello"))
+	//Lesson 1
+	// fmt.Print(checkPrime(17))
+
+	//Lesson 2
+	fmt.Print(reverseString("hello"))
 }
