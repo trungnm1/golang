@@ -68,5 +68,43 @@ func createMap() {
 		}
 	}
 	fmt.Println(list)
+}
 
+type User struct{
+	ID int
+	Name string
+}
+
+var users = make(map[int]User)
+
+func addUser(id int, name string){
+	users[id]=User{
+		ID : id,
+		Name: name,
+	}
+}
+func findUser(id int) (User,bool) {
+	u,ok := users[id]
+	return u,ok
+}
+
+func updateUser(id int, newName string)bool{
+	u,ok :=users[id]
+	if !ok {
+		return false
+	}
+	u.Name =newName
+	users[id]= u 
+	return true
+}
+func deleteUser(id int) {
+	delete(users, id)
+}
+
+
+
+func printUsers(users map[int]User) {
+    for k := range users{
+		fmt.Println(users[k])
+	}
 }
