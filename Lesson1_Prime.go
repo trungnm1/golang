@@ -1,5 +1,6 @@
 package main
 
+
 func checkPrime(a int) bool {
     if a < 2 {
         return false
@@ -12,4 +13,4 @@ func checkPrime(a int) bool {
     }
     return true
 }
-
+ 
